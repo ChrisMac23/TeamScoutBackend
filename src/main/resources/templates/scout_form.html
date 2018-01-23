@@ -1,0 +1,212 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8" />
+<meta name="viewport" http-equiv="Content-Type"
+	content="width=device-width, initial-scale=1 text/html; charset=UTF-8" />
+
+
+<link rel="stylesheet" type="text/css"
+	href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+<link rel="stylesheet" th:href="@{/css/main.css}"
+	href="../../css/main.css" />
+
+
+</head>
+<style type="text/css">
+
+.jumbotron {
+	background-color: #800000;
+	color: white;
+}
+.container-bg {
+	background-color: #800000;
+	opacity: 0.5;
+	padding: 60px;
+}
+.container-bg:hover {
+	background-color: #e1e1d0;
+	opacity: 1;
+	padding: 60px;
+}
+body {
+	background-image:
+		url("http://www.chsdragonfootball.com/wp-content/uploads/2013/04/pngthum.png");
+	background-color: #fffff;
+	background-size: 200px 160px;
+	padding: 60px;
+	min-height: 2000px;
+}
+
+#teamname {
+	color: gold;
+	font-size: 200%;
+}
+@media (min-width: 768px) {
+    .container-small {
+        width: 300px;
+    }
+    .container-large {
+        width: 970px;
+    } 
+}
+ 
+@media (min-width: 992px) {
+    .container-small {
+        width: 500px;
+    }
+    .container-large {
+        width: 1170px;
+    } 
+}
+ 
+@media (min-width: 1200px) {
+    .container-small {
+        width: 700px;
+    }
+    .container-large {
+        width: 1500px;
+    } 
+}
+
+.container-small, .container-large {
+    max-width: 100%;
+}
+</style>
+<body>
+	<!-- <nav class= "navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+      <a class="navbar-brand" href="#">Collierville Dragons Scouting App</a>
+    </div>
+    <div id = "navbar" class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#teamName">Create Team</a></li>
+      <li><a href="#">Page 2</a></li>
+      <li><a href="#">Page 3</a></li>
+      <li class = "dropdown open">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+    <li><a href="http://colliervillehs.org"><span class="sr-only">Collierville High</span></a></li>
+    
+    </ul>
+    </div>
+  </div>
+</nav>
+<br>
+<br>-->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Scouting</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="../">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#contact">Contact</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown" role="button" aria-haspopup="true"
+						aria-expanded="false">Dropdown <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li role="separator" class="divider"></li>
+							<li class="dropdown-header">Nav header</li>
+							<li><a href="#">Separated link</a></li>
+							<li><a href="#">One more separated link</a></li>
+						</ul></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="../navbar/">Default</a></li>
+					<li><a href="../navbar-static-top/">Static top</a></li>
+					<li class="active"><a href="./">Fixed top <span
+							class="sr-only">(current)</span></a></li>
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</nav>
+	<div class="container">
+		<div class="jumbotron">
+
+			<h1>Collierville Dragons</h1>
+			<p>Use this to Scout the different teams in the competition.
+				Start off by Entering team name below. ${message}</p>
+				    <p th:text="'Hello, ' + ${message} + '!'" />
+		</div>
+
+	</div>
+	<!-- <div class="container">
+		 <div class="form-group" >
+			<label for="usr" id="teamName">Name:</label> <input type="text"
+				class="form-control" id="usr" />
+		</div>
+		<button type="submit" class="btn-default btn-lg" value="Submit" role="button">
+			New Team</button>
+	</div>-->
+	<br />
+	<br />
+	<div class="container container-small">
+	<div class="container-bg">
+	<form th:action="@{/scout}" th:object="${team}" method = "post" >
+	 <div class="form-group">
+  <label for="usr">Name:</label>
+  <input type="text" class="form-control" th:field="*{name}" id="usr"></input>
+</div>
+	<div class="form-group">
+  <label>Team Number:</label>
+  <input type="text" class="form-control" th:field="*{teamNum}" id="num"></input>
+  <br></br>
+  <button type="submit" class="btn-default btn-lg" role="button" name="action" value="save">
+			New Team</button>
+</div> 
+</form>
+	</div>
+	</div>
+	<script type="text/javascript"
+		src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+<script type="text/javascript" th:inline="javascript">
+	/*window.onload = function() {
+		var value = 23;
+		document.getElementById("myID").innerHTML = value;
+
+	}*/
+	var name = [[${team.name}]]
+	window.onload = function() {
+		document.getElementById("usr").value = name;
+	}
+</script>
+
+
+
+</html>
